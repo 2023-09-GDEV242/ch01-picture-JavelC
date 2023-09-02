@@ -6,8 +6,8 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author  Javel Chalas
+ * @version 2023.09.02
  */
 public class Picture
 {
@@ -15,6 +15,12 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Person man;
+    private Person date;
+    private Square grass;
+    private Square sky;
+    private Triangle star;
+    private Square pebbles;
     private boolean drawn;
 
     /**
@@ -26,6 +32,12 @@ public class Picture
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
+        man = new Person();
+        date = new Person();
+        grass = new Square();
+        sky = new Square();
+        star = new Triangle();
+        pebbles = new Square();
         drawn = false;
     }
 
@@ -35,6 +47,8 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+            
+            
             wall.moveHorizontal(-140);
             wall.moveVertical(20);
             wall.changeSize(120);
@@ -56,6 +70,13 @@ public class Picture
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+            
+            grass.changeColor("green");
+            grass.moveHorizontal(-350);
+            grass.moveVertical(120);
+            grass.changeSize(1000);
+            grass.makeVisible();
+            
             drawn = true;
         }
     }
