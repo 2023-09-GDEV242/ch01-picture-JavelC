@@ -19,8 +19,8 @@ public class Picture
     private Person date;
     private Square grass;
     private Square sky;
-    private Triangle star;
-    private Square pebbles;
+    private Square Rshoe;
+    private Square Lshoe;
     private boolean drawn;
 
     /**
@@ -36,8 +36,8 @@ public class Picture
         date = new Person();
         grass = new Square();
         sky = new Square();
-        star = new Triangle();
-        pebbles = new Square();
+        Lshoe = new Square();
+        Rshoe = new Square();
         drawn = false;
     }
 
@@ -47,8 +47,14 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+
+            sky.changeColor("blue");
+            sky.moveVertical(-100);
+            sky.moveHorizontal(-355);
+            sky.changeSize(1000);
+            sky.makeVisible();
             
-            
+        
             wall.moveHorizontal(-140);
             wall.moveVertical(20);
             wall.changeSize(120);
@@ -65,7 +71,7 @@ public class Picture
             roof.moveVertical(-60);
             roof.makeVisible();
     
-            sun.changeColor("yellow");
+            sun.changeColor("white");
             sun.moveHorizontal(100);
             sun.moveVertical(-40);
             sun.changeSize(80);
@@ -76,6 +82,38 @@ public class Picture
             grass.moveVertical(120);
             grass.changeSize(1000);
             grass.makeVisible();
+            
+            
+            man.changeColor("blue");
+            man.moveHorizontal(-20);
+            man.moveVertical(10);
+            man.makeVisible();
+            
+            date.changeColor("yellow");
+            date.moveHorizontal(10);
+            date.moveVertical(-90);
+            date.makeVisible();
+            
+            
+            Lshoe.changeColor("black");
+            Lshoe.moveHorizontal(-65);
+            Lshoe.moveVertical(115);
+            Lshoe.changeSize(10);
+            Lshoe.makeVisible();
+            
+            Rshoe.changeColor("black");
+            Rshoe.moveHorizontal(-42);
+            Rshoe.moveVertical(115);
+            Rshoe.changeSize(10);
+            Rshoe.makeVisible();
+            
+            
+            
+            
+            
+            
+            
+            
             
             drawn = true;
         }
