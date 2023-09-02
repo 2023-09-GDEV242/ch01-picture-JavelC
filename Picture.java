@@ -8,6 +8,9 @@
  * 
  * @author  Javel Chalas
  * @version 2023.09.02
+ * 
+ * a bald person with shoes comes back home with their date; a person with 
+ * hair (afro) but no shoes
  */
 public class Picture
 {
@@ -19,6 +22,7 @@ public class Picture
     private Person date;
     private Square grass;
     private Square sky;
+    private Circle head;
     private Square Rshoe;
     private Square Lshoe;
     private boolean drawn;
@@ -36,8 +40,10 @@ public class Picture
         date = new Person();
         grass = new Square();
         sky = new Square();
+        head = new Circle();
         Lshoe = new Square();
         Rshoe = new Square();
+    
         drawn = false;
     }
 
@@ -89,11 +95,16 @@ public class Picture
             man.moveVertical(10);
             man.makeVisible();
             
-            date.changeColor("yellow");
-            date.moveHorizontal(10);
-            date.moveVertical(-90);
-            date.makeVisible();
+            head.changeColor("yellow");
+            head.moveHorizontal(55);
+            head.moveVertical(87);
+            head.changeSize(15);
+            head.makeVisible();
             
+            date.changeColor("black");
+            date.moveHorizontal(10);
+            date.moveVertical(10);
+            date.makeVisible();
             
             Lshoe.changeColor("black");
             Lshoe.moveHorizontal(-65);
@@ -124,10 +135,16 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
+        wall.changeColor("white");
         window.changeColor("white");
         roof.changeColor("black");
         sun.changeColor("black");
+        sky.changeColor("black");
+        man.changeColor("black");
+        date.changeColor("black");
+        Lshoe.changeColor("black");
+        Rshoe.changeColor("black");
+        grass.changeColor("white");
     }
 
     /**
@@ -135,9 +152,18 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
+        wall.changeColor("greem");
         window.changeColor("black");
         roof.changeColor("green");
         sun.changeColor("yellow");
+        grass.changeColor("green");
+        sky.changeColor("blue");
+        date.changeColor("red");
+        man.changeColor("blue");
+        Lshoe.changeColor("black");
+        Rshoe.changeColor("black");
+        
+        
+        
     }
 }
